@@ -21,8 +21,8 @@ public class BranchAdminEntity {
     @Column(nullable = false, unique = true)
     private String branchName;
 
-
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "superadmin_id")
     private SuperAdminEntity superAdmin;
 

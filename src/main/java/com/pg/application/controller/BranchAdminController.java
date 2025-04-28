@@ -13,13 +13,15 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/branchadmin")
+@CrossOrigin
 public class BranchAdminController {
+
+
 
     @Autowired
     private BranchAdminService branchAdminService;
 
     // Create a new BranchAdmin
-
 
     // Get all BranchAdmins
     @GetMapping("/all")
@@ -43,6 +45,9 @@ public class BranchAdminController {
           ? ResponseEntity.ok(updatedBranchAdmin)
           : ResponseEntity.notFound().build();
     }
+
+
+
 
     // Delete a BranchAdmin by ID
     @DeleteMapping("/delete/{id}")
